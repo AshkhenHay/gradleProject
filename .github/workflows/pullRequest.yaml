@@ -16,10 +16,10 @@ jobs:
            uses: actions/setup-java@v1
            with:
                java-version: 11
-                description: 'adopt'
+               distribution: 'adopt'
          - name: Grant execute permission for gradlew
            run: chmod +x gradlew
          - name: Build with Gradle
-           run: ./gradlew build
+           run: ./gradlew build --scan
          - name: Print Message
            run: echo "CI pipeline part finished successfully!"
