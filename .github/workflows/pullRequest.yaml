@@ -4,7 +4,6 @@ pull_request:
       branches: [ master ]
 jobs:
   build:
-  gradle:
      runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -12,5 +11,6 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
+          distribution: 'adopt'
       - name: Build with Gradle
          run: ./gradlew build
