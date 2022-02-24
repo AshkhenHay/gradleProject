@@ -1,8 +1,11 @@
 name: Run build pull request
-on: push
+on:
+
+  pull_request:
+    branches: [master]
 jobs:
   bulid:
-   
+
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
