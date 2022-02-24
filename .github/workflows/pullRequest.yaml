@@ -1,11 +1,9 @@
 name: Run build pull request
 on: push
 jobs:
-  gradle:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-    runs-on: ${{ matrix.os }}
+  bulid:
+   
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
